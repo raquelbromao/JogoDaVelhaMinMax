@@ -167,7 +167,9 @@ public class Teste {
 	}
 
 	/*
-	 * Método MinMax
+	 * Função que dá início ao algoritmo MinMax
+	 * 
+	 * Recebe o tabuleiro e por qual nivel o usuário que começar a computação
 	 */
 	public static int decideJogada(int[] tabuleiro, String nivel) {
 		int maiorPonto = -10;
@@ -250,6 +252,13 @@ public class Teste {
 		return jogadaPC[r];
 	}
 	
+	/*
+	 * Função que inverte a String Nivel
+	 * 
+	 * 1. Recebe a String Nivel
+	 * 		a. Se Nivel = MAX -> Nivel = MIN
+	 * 		b. Se Nivel = MIN -> Nivel = MAX
+	 */
 	public static String inverteNivel(String n) {
 		if (n.equals("MAX")) {
 			n = "MIN";
@@ -260,6 +269,12 @@ public class Teste {
 		return n;
 	}
 	
+	/*
+	 * Função do MinMax
+	 * 
+	 * Recebe o tabuleiro e o nivel que está.
+	 * Realiza a computação
+	 */
 	public static int minmax(int[] t, String nivel) {
 		int menorPonto = 10;
 		int maiorPonto = -10;
